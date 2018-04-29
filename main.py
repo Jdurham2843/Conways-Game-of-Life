@@ -146,8 +146,9 @@ def make_determination(current_state, live_neighbor_count):
         return DEAD_CELL_MARKER
 
 if __name__ == '__main__':
+    # TODO: add ability to provide seed file
     args = parse_cli_arguments()
-    grid = init_grid(int(args.height), int(args.width)) if args.height and args.width else None
+    grid = init_grid(int(args.height), int(args.width)) if args.height and args.width else init_grid(20, 20)
     
     start_life(grid)
 
