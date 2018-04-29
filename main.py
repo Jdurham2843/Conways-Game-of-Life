@@ -148,7 +148,14 @@ def make_determination(current_state, live_neighbor_count):
 if __name__ == '__main__':
     # TODO: add ability to provide seed file
     args = parse_cli_arguments()
-    grid = init_grid(int(args.height), int(args.width)) if args.height and args.width else init_grid(20, 20)
+    height = int(args.height)
+    width = int(args.width)
+
+    grid = None
+    if height < 5 or width < 5:
+        grid = init_grid(20, 20)
+    else:
+        grid = init_grid(height, width)
     
     start_life(grid)
 
