@@ -20,7 +20,7 @@ def print_grid(grid, generation):
         print(row)
 
 def init_grid(height, width):
-    grid = [['.' for x in range(width)] for x in range(height)]
+    grid = [[DEAD_CELL_MARKER for x in range(width)] for x in range(height)]
     grid = add_initial_live_cells(grid)
     return grid
 
