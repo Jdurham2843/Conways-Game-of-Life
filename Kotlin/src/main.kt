@@ -7,6 +7,7 @@ fun main(args: Array<String>) {
 }
 
 fun getSizeArguments(args: Array<String>) : Pair<Int, Int> {
+    /* TODO: get command line arguments for life dimensions */
     return Pair(20, 20)
 }
 

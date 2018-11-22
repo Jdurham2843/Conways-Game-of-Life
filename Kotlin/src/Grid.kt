@@ -50,7 +50,7 @@ private fun Grid.addInitialValues() {
 }
 
 fun Grid.nextGeneration() : Grid {
-    val newGrid = this.map { row -> row.map { cs ->  cs }.toCollection(ArrayList()) }.toCollection(ArrayList())
+    val newGrid: Grid = this.map { row -> row.map { cs ->  cs }.toCollection(ArrayList()) }.toCollection(ArrayList())
 
     for ((hIndex, column) in newGrid.withIndex()) {
        for ((wIndex, _) in column.withIndex())  {
@@ -58,7 +58,7 @@ fun Grid.nextGeneration() : Grid {
        }
     }
 
-    return this
+    return newGrid
 }
 
 private fun Grid.determineLivingStatus(y: Int, x: Int) : CellStatus{
